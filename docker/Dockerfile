@@ -17,11 +17,8 @@ VOLUME /var/www/.composer
 VOLUME /var/www/.ssh
 
 # symbolic links to index.php and static files
-ARG APP_PATH=/var/www/satisfy
-RUN cd /var/www/html \
-    && ln -s $APP_PATH/web/index.php \
-    && ln -s $APP_PATH/web/js \
-    && ln -s $APP_PATH/web/css \
-    && ln -s $APP_PATH/web/fonts
+RUN rm -rf /var/www/html \
+    && ln -s /var/www/satisfy/web /var/www/html \
+    && chown -h www-data:www-data /var/www/html
 
 ENTRYPOINT ["supervisord", "-n"]

@@ -19,6 +19,7 @@ $app->get('/', function () use ($app) {
     return $app->sendFile($indexPath);
 })->bind('home');
 
+$app->mount('/', new \Playbloom\Satisfy\Controller\WebhookController());
 $app->mount('/admin/', new \Playbloom\Satisfy\Controller\SecurityController());
 $app->mount('/admin/', new \Playbloom\Satisfy\Controller\RepositoryController());
 

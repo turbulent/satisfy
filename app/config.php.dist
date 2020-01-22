@@ -65,3 +65,8 @@ $app['auth.users'] = array(
     'admin' => '0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33',
     'john' => 'd6b4e84ee7f31d88617a6b60421451272ebf1a3a',
 );
+
+/**
+ * GitLab secret token for triggering builds on webhooks
+ */
+$app['gitlab-secret-token'] = 'change-me';
