@@ -2,3 +2,9 @@ composer.phar
 satis.json
 satis.whitelist.json
 app/config.php
+web/include
+web/packages.json
+web/index.html
+web/dist
+vendor
+_old_website
